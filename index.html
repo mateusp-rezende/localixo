@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localixo</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.css"/>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
+
+</head>
+<body>
+  <!--ALERTS -->   
+  <div class="container-mensagens" id="container-mensagens">
+
+  </div>
+  <!--btn carrinho -->  
+    <a class="btn-carrinho hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
+        <div class=" container-total-carrinho badge-total-carrinho">0</div>
+        <i class="fas fa-shopping-bag"></i>
+    </a>
+<!--PAGINA PRINCIPAL -->    
+    <section class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
+                <a href="#" class="navbar-brand wow fadeIn">
+                    <img src="./img/logo.png" class="img-logo">
+                        </a>
+                    
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                            <span class="navbar-toggler-icon">
+                                <i class="fas fa-bars"></i>                          
+                              </span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ml-auto mr-auto wow fadeIn">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#cadastro"><b>cadastre-se</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#servicos"><b>Serviços</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#cardapio"><b>Premios</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#local"><b>Pontos de coleta</b></a>
+                                </li>
+                            </ul>
+                            <a class="btn btn-white btn-icon wow fadeIn" onclick="cardapio.metodos.abrirCarrinho(true)">
+                            
+                                resgatar <span class="icon"> 
+                                    <div class="container-total-carrinho badge-total-carrinho hidden">0</div>
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                                  
+                            </a>
+                        </div>
+            </nav>
+        </div>
+    </section>
+  
+    <section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-one col-lg-6 col-md-6">
+                <div class="d-flex text-banner">
+                    <h1 class="wow fadeInLeft delay-01s"><b>Localixo<b class="color-primary"> aqui seu lixo vira luxo</b></b></h1>
+                    <p  class="wow fadeInLeft delay-02s">
+                        O Localixo é uma comunidade em crescimento, e convidamos você a fazer parte dessa jornada. Juntos, podemos transformar o mundo, um lixo de cada vez. 🌿🌎
+                    </p>
+                    <div class=" wow fadeIn delay-05s">
+                        <a href="#cardapio" class="btn btn-yellow mt-4 mr-3">
+                           Ver recompensas
+                        </a>
+                        <a href="tel:+5562981030357" id="btnLigar" class="btn btn-white btn-icon-left mt-4 mr-3">
+                            <span class="icon-left">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                           quero ser parceiro
+                        </a>
+                    </div>
+                   
+                </div>
+            </div>
+    <div class="banner col-6 no-mobile">
+                <div class="card-banner">
+
+                </div>
+                <div class="d-flex img-banner wow fadeIn delay-07s ">
+                    <img class="wow fadeIn delay-07s" src="/img/crianca-reciclando.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="servicos " id="servicos">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-one text-center mb-5 wow fadeIn">
+                    <span class="hint-title"><b>beneficios</b></span>
+                    <h1 class="title">Venha você e sua empresa fazer parte desse projeto!</h1>
+                </div>
+                <div class="col-12 col-lg-4  col-md-4 col-sm-12 col-one mb-5 wow fadeInUp">
+                    <div class="card-icon text-center">
+                        <img src="/img/arvore.png" width="200">
+                    </div>
+                    <div class="card-text text-center mt-3">
+                        <p class="color-primary"><b>IPTU VERDE</b></p>
+                        <span> <b>DESCONTOS DE ATÉ 20% NO SEU IPTU</b> A PEC 13/2019 tem como objetivo estabelecer critérios ambientais que possibilitam a redução da alíquota do IPTU. Justamente com o intuito de incentivar os contribuintes a adotar comportamentos que sejam ecologicamente sustentáveis!</span>
+                    </div>  
+                </div>
+                <div class="col-12 col-lg-4  col-md-4 col-sm-12 col-one  mb-5 wow fadeInUp">
+                    <div class="card-icon text-center">
+                        <img src="/img/lei.png" width="100">
+                    </div>
+                    <div class="card-text text-center mt-3">
+                        <p class="color-primary"><b>Lei 14.260/2021</b></p>
+            <span>Incentivos fiscais para pessoas físicas e jurídicas que apoiarem projetos de reciclagem</span>
+                    </div>  
+                </div>
+                <div class="col-12 col-lg-4  col-md-4 col-sm-12 col-one  mb-5 wow fadeInUp">
+                    <div class=" card-icon text-center">
+                        <img src="/img/qualidade.jpg" width="200">
+                    </div>
+                    <div class="card-text text-center mt-3">
+                        <p class="color-primary"><b>PARCERIAS ESTRATÉGICAS</b></p>
+                        <span><b>Benefícios para os nossos participantes e Visibilidade para Sua Empresa!   </b>
+                            Ao colaborar conosco, sua empresa não apenas contribui para um mundo melhor, mas também ganha destaque nas nossas redes de comunicação.
+                        </span>
+                    </div>  
+                </div>
+               
+
+            </div>
+        </div>
+    </section>
+    <section class="reserva wow fadeInUp"  id="cadastro">
+        <div class="container ">
+          <div class="row">
+              <div class="col-12 col-one">
+                  <div class="card-secondary">
+                      <div class="row">
+                          <div class="col-12 col-lg-7 col-md-7 col-sm-12 col-one">
+                             
+                                  <span class="hint-title"><b>PARTICIPE</b></span>
+                                  <h1 class="title">FAÇA SEU CADASTRO</h1>
+  
+                                  <p class="pr"> venha fazer parte dessa familia <br>
+                                  e ganhe premios por fazer o bem!</p>
+  
+                                  <a class="btn btn-yellow mt-4" id="btnReserva" href="#" target="_blank">ENTRAR</a>
+                             
+                          </div>
+                          <div class="col-5 no-mobile">
+                             
+                              <div class="d-flex img-banner">
+                                  <img src="/img/pessoas-felizes.jpg" >
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    <section class="cardapio" id="cardapio" >
+       
+   <div class="container">
+    <div class="row">
+        <div class="col-12 col-one text-center mb-5">
+            <span class="hint-title "><b class="wow fadeInUp">Premios</b></span>
+            <h1 class="title wow fadeInUp ">Troques seus pontos por cupons de desconto!</h1>
+        </div>
+        <div class="col-12 col-one container-menu wow fadeInRight">
+        <a  id="menu-equipamentos" class="btn btn-sm btn-white mr-3 active"  onclick="cardapio.metodos.obterItensCardapio('equipamentos')">
+            <i class="fas fa-tshirt"></i>&nbsp; Roupas 
+        </a>
+        <a class="btn btn-sm btn-white mr-3 " id="menu-acessorios"  onclick="cardapio.metodos.obterItensCardapio('acessorios')">
+            <i class="fas fa-socks"></i></i>&nbsp; Acessorios
+        </a>
+        <a class="btn btn-sm btn-white mr-3 " id="menu-comidas" onclick="cardapio.metodos.obterItensCardapio('comidas')">
+            <i class="fas fa-hamburger"></i></i>&nbsp; Comidas
+
+        </a>
+        <a class="btn btn-sm btn-white mr-3 " id="menu-steaks" onclick="cardapio.metodos.obterItensCardapio('consumiveis')">
+            <i class="fas fa-gas-pump"></i>&nbsp; Combustivel
+        </a>
+        <a class="btn btn-sm btn-white mr-3 " id="menu-bebidas" onclick="cardapio.metodos.obterItensCardapio('moveis')" >
+            <i class="fas fa-dolly-flatbed"></i>&nbsp; móveis
+        </a>
+       
+        </div>
+        <div class="col-12 col-one wow fadeIn delay-07s">
+            <div class="row" id="itensCardapio">
+               
+                
+            </div>
+        </div>
+
+        <div class="col-12 col-one text-center" >
+
+            <a id="btnVerMais" class="btn btn-sm btn-white wow fadeInUp"  onclick="cardapio.metodos.verMais()">
+                 Ver mais
+            </a>
+        </div>
+        
+    </div>
+   </div>
+    </section>
+    <section class="local"  id="local">
+        <div class="background-local"></div>
+        <div class="container">
+         <div class="row">
+
+           
+
+             <div class="col-12 col-one img-banner">
+                <div class="col-12 col-one text-center mb-5">
+                    <span class="title "><b class="wow fadeInUp">Pontos de Coleta</b></span>
+                    <h1 class="hint-title wow fadeInUp ">Goiânia</h1>
+                </div>
+
+                   
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122282.63400556654!2d-49.431267190954394!3d-16.71026279999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef5633a94395f%3A0x69d7ec5530579456!2sAterro%20Sanit%C3%A1rio%20de%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1729092114329!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+             </div>
+
+         </div>
+        </div>
+    </section>
+   
+   
+    <footer>
+        <div class="container ">
+            <div class="row">
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-logo-footer">
+                    <img class="logo-footer" src="/img/logo.png" >
+                </div>
+               
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one container-texto-footer">
+                    <p class="mb-0">
+                        <b>Hackers por natureza </b>&copy; Todos os direitos reservados.
+                    </p>
+                    
+                </div>
+               
+                
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-redes-footer">
+                    <a class="btn btn-sm btn-social btn-white mr-3" href="https://www.instagram.com/microlaser2019/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-sm btn-social btn-white mr-3" href="https://www.facebook.com/search/top/?q=microlaser%20equipamentos%20hospitalares">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a  id="btnWhatsapp" class="btn btn-sm btn-social btn-white btnWhatsapp" href="https://api.whatsapp.com/send?phone=5562981030357&text=Ol%C3%A1%20tudo%20bem?,%20vim%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20os%20servi%C3%A7os"  target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    
+                  
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-one container-texto-footer">
+                    <p class="mb-0">
+                       <a class="nav-link" href="https://www.instagram.com/mateusp_rezendee/">Site desenvolvido por Mateus de Paula Rezende</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<!--PAGINA DE CARRINHO -->
+
+
+
+    <div class="modal-full hidden animated fadeInLeft " id="modalCarrinho">
+        <div class="m-header">
+            <div class="container">
+                <a class="btn btn-white btn-sm float-right" onclick="cardapio.metodos.abrirCarrinho(false)">
+                    fechar
+                </a>
+                <div class="etapas">
+                    <div id="etapa1" class="etapa etapa1 active">1</div>
+                    <div id="etapa2" class="etapa etapa2">2</div>
+                    <div  id="etapa3" class="etapa etapa3">3</div>
+                </div>
+                <p class="title-carrinho mt-4">
+                    <b id="lblTituloEtapa">Seu carrinho:</b>
+                </p>
+            </div>
+        </div>
+        <div class="m-body">
+            <div class="container">
+                <div id="ItensCarrinho" class="row mr-0 ml-0  animated fadeIn hidden ">
+
+                  
+                </div>
+                <div id="verificao" class="row mr-0 ml-0 d-flex center animated fadeIn hidden">
+
+                    <div class="col-12 col-lg-6 col-md-'2' col-sm-12 col-one">
+                        <div class="form-group container-cep">
+                            <label for="">CPF:</label>
+                            <input  type="text" id="txtCEP" class="form-control">
+                            <a class="btn btn-yellow btn-sm"></a>
+                        </div>
+                    </div>
+                    <div class="col-8 no-mobile"></div>
+
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
+                        <div class="form-group ">
+                            <label for="">nome:</label>
+                            <input  type="text"id="txtNome" class="form-control">
+        
+                        </div>
+                    </div>
+
+                    <div class="col-8 no-mobile"></div>
+
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
+                        <div class="form-group ">
+                            <label for="">senha:</label>
+                            <input  type="password"id="txtSenha" class="form-control">
+        
+                        </div>
+                    </div>
+
+                 
+                </div>
+                <div id="resumoCarrinho" class="row mr-0 ml-0   animated fadeIn hidden ">
+
+                    <div class="col-12">
+                        <p class="title-carrinho mt-4">
+                            <b>Itens:</b>
+                        </p>
+                    </div>
+                    <div class="col-12">
+                      <div class="row" id="listaItensResumo">
+                        
+
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                        <p class="title-carrinho mt-4">
+                            <b>Bem vindo:</b>
+                        </p>
+                    </div>
+                 
+
+                <div class="col-12 item-carrinho resumo">
+                    <div class="img-map">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+
+                    <div class="dados-produto">
+                        <p class="texto-endereco">
+                            <b id="resumoEndereco"> </b>
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="m-footer">
+            <div class="container">
+                <div class="container-total text-right mb-4">
+                    
+                    <p class="mb-0 meus-pontos hidden">
+                        <span><i class="fas fa-car"></i> Seus pontos: 100.000 </span>
+                      
+                    </p>
+                    <p class="mb-0 texto-total">
+                       
+                        <span class="valor-total" ><b id="lblValorTotal" > 0,00</b> </span>
+                        <span><b>Pontos</b></span>
+                    </p>
+                </div> 
+
+                <a onclick="cardapio.metodos. carregarEndereco()" id="btnEtapaPedido" class="btn btn-yellow float-right hidden"> Continuar</a>
+                <a onclick="cardapio.metodos.resumoPedido(3)" id="btnEtapaEndereco" class="btn btn-yellow float-right hidden"  onclick="cardapio.metodos.buscarCep()"> Revisar </a>
+                <a href="#" id="btnEtapaResumo" class="btn btn-yellow float-right hidden" target="_blank"> Fazer simulação</a>
+
+                <a onclick="cardapio.metodos.voltarEtapa()" id="btnVoltar" class="btn btn-white float-right mr-3 "> Voltar </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="descricaopage">
+        <!-- Lista de produtos será carregada aqui -->
+    </div>
+   
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"> </script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/dados.js"></script>
+   
+   
+
+    <script> new WOW().init();</script>
+   
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
