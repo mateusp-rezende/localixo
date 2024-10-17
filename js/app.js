@@ -6,7 +6,7 @@ var cardapio = {}
 
 var MEU_CARRINHO = []
 
-var CELULAR = '5562996096028';
+var CELULAR = '5562997796077';
 
 var MEUS_ = null;
 
